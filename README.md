@@ -56,9 +56,9 @@ Be sure to include the follwing files and folders in the
 
 ## Project structure
 
--   `data` folder: This folder folder contains all the mock data used to render all the components of the page, including images information, icon components, and importation data for rendering the elements of the page: The header, the items grid and the footer.
+-   `data` folder: This folder contains all the mock data used to render all the components of the page, including images information, icon components, and importation data for rendering the elements of the page: The header, the items grid and the footer.
 
--   `components` folder: As it's name says, this folder contains all the components that compose the aforementioned elements.
+-   `components` directories: As it's name says, this folder contains all the components that compose the aforementioned elements.
 
     Each subfolder is named after the elements or group of elements its going to contain. Each of these folders stores the components `.tsx` files and `.css` files it needs to properly render.
 
@@ -94,3 +94,9 @@ Taking into account BEM's notation every CSS selector was named following the pa
 -   Elements are that form parts of a block and dont have a distinguishable name separated from its parent.
 
 -   Modifier are flags that only represent a change on its companion appearance, behavior or state, such as its colors or visibility.
+
+CSS variables where used to simplify the creation of the modifier selectors. The variables can all be found in the `App.css` file in `src` directory
+
+## Responsive Design
+
+The page has to be visible in the mutiple devices. The design and development of the responsive layouts where made following ChicksGold official website and with the help of Opera Browser's toggle device tool, making a responsive layout that fits the dimensions for the majority of the devices screens.
