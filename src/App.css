@@ -1,0 +1,224 @@
+#root {
+    width: 100%;
+    text-align: center;
+
+    --fluorescent-green: rgb(57, 226, 157);
+    --gray-50: rgba(255, 255, 255, 0.75);
+    --gray-75: rgb(255 255 255 / 55%);
+    --gray-90: rgb(59, 68, 93);
+    --gray-100: #34384b;
+    --gray-200: #3f4254;
+    --gray-300: #303141;
+    --gray-translucent: rgba(76, 96, 133, 0.2);
+    --gray-translucent-100: rgb(55, 56, 76, 0.9);
+    --blue-clear: #4c6085;
+    --blue: #5762d5;
+    --dark-blue: #454da8;
+    --darker-blue: rgb(43, 44, 59);
+    --red-clear: rgb(253, 74, 74);
+
+    --facebook: rgb(59, 89, 153);
+    --twitter: rgb(50, 163, 206);
+    --discord: rgb(114, 137, 217);
+    --instagram-start: rgb(239, 145, 129);
+    --instagram-end: rgb(212, 40, 130);
+
+    --item-card-max-width: 250px;
+}
+
+.main-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 10;
+    background: center / cover no-repeat url("./assets/images/wallpaper.png");
+}
+
+.main-container__bg-mod-layer {
+    position: absolute;
+    z-index: 20;
+    background-color: var(--gray-translucent-100);
+    width: 100%;
+    height: 100%;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 30;
+    box-sizing: border-box;
+    margin: 6rem auto 0;
+    padding: 1rem 1.5rem 5rem;
+    min-width: 200px;
+    max-width: max-content;
+}
+
+.main-content > * + * {
+    margin-top: 1.5rem;
+}
+
+.main-content__hero {
+    margin: 0;
+    width: 100%;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.items-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid var(--blue-clear);
+    border-radius: 0.25rem;
+    background-color: var(--gray-300);
+    padding: 1.5rem;
+    width: max-content;
+}
+
+.items-container > * + * {
+    margin-top: 1.5rem;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(1, var(--item-card-max-width));
+    gap: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .items-grid {
+        grid-template-columns: repeat(2, var(--item-card-max-width));
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .items-grid {
+        grid-template-columns: repeat(3, var(--item-card-max-width));
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .items-grid {
+        grid-template-columns: repeat(4, var(--item-card-max-width));
+    }
+}
+
+.bg--gray--translucent {
+    background-color: var(--gray-translucent);
+}
+
+.bg--gray--90 {
+    background-color: var(--gray-90);
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 0.25rem;
+    background: none;
+}
+
+.btn--xs {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    width: 12px;
+    height: 12px;
+}
+
+.btn--inline-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.btn--inline-icon > * + * {
+    margin-left: 0.5rem;
+}
+
+.btn--blue {
+    background-color: var(--blue);
+}
+
+.btn--blue--outline {
+    border: 1px solid var(--blue);
+}
+
+.btn--fluorescent-green {
+    background-color: var(--fluorescent-green);
+}
+
+.btn--gray-200 {
+    background-color: var(--gray-200);
+}
+
+.text--capitalize {
+    text-transform: capitalize;
+}
+
+.text--uppercase {
+    text-transform: uppercase;
+}
+
+.text--gray--50 {
+    color: var(--gray-50);
+}
+
+.text--line--through {
+    text-decoration: line-through;
+}
+
+.text--decor--red--clear {
+    text-decoration-color: var(--red-clear);
+}
+
+.bg--facebook {
+    background-color: var(--facebook);
+}
+
+.bg--instagram {
+    background: linear-gradient(
+        0.25turn,
+        var(--instagram-start),
+        var(--instagram-end)
+    );
+}
+
+.bg--twitter {
+    background-color: var(--twitter);
+}
+
+.bg--discord {
+    background-color: var(--discord);
+}
+
+.bg--darker-blue {
+    background-color: var(--darker-blue);
+}
+
+.arrow-down-icon--xs,
+.arrow-up-icon--xs {
+    width: 11px;
+    height: 8px;
+}
+
+.arrow-up-icon--xs {
+    transform: rotate(0.5turn);
+}
+
+.visibility--hidden {
+    visibility: hidden;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}

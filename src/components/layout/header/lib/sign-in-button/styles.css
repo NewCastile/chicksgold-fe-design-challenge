@@ -1,0 +1,51 @@
+.sign-in-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+    padding: 0.75rem 1.25rem;
+    width: max-content;
+    color: var(--darker-blue);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 412px) {
+    .sign-in-btn {
+        display: none;
+    }
+}
+
+.sign-in-btn__icon {
+    margin-left: 0.5rem;
+}
+
+.header__right-items-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    width: max-content;
+}
+
+.header__right-items-container > * {
+    flex-basis: content;
+}
+
+.header__right-items-container > * {
+    margin-left: 0rem;
+}
+
+@media screen and (max-width: 1280px) {
+    .header__right-items-container > * {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .header__right-items-container > * {
+        margin-left: 1rem;
+    }
+}

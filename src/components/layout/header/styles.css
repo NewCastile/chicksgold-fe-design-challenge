@@ -1,0 +1,114 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--blue-clear);
+    background: var(--gray-300);
+    padding-right: 1.25rem;
+    padding-left: 0.75rem;
+    width: 100%;
+    height: 6rem;
+}
+
+.header > * + * {
+    margin-left: 2rem;
+}
+
+.header__menu-btn-container {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    width: max-content;
+}
+
+@media only screen and (min-width: 1024px) {
+    .header__menu-btn-container {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .header__menu-btn-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid white;
+        width: 20rem;
+    }
+}
+
+.header__menu-btn {
+    padding: 0.5rem 1rem;
+    width: max-content;
+    color: var(--gray-75);
+}
+
+@media only screen and (min-width: 1280px) {
+    .header__menu-btn {
+        display: none;
+    }
+}
+
+.header-menu {
+    display: none;
+}
+
+.header__chicks-logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding-right: 2rem;
+    padding-bottom: 0.25rem;
+    width: max-content;
+}
+
+.header-menu-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.header-menu-list > * {
+    flex-basis: 6rem;
+}
+
+.header-menu-list > * + * {
+    margin-left: 3rem;
+}
+
+.header-menu-list-item {
+    font-weight: 500;
+    font-size: small;
+    text-transform: uppercase;
+}
+
+.header-menu-list-item > * + * {
+    margin-left: 0.5rem;
+}
+
+@media only screen and (min-width: 1024px) {
+    .header-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+.header__right-items-dropdown {
+    display: flex;
+}
+
+@media only screen and (max-width: 1280px) {
+    .header__right-items-dropdown {
+        display: none;
+    }
+}

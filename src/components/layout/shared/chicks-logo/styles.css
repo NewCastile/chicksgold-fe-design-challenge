@@ -1,0 +1,19 @@
+.chicks-logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+    width: max-content;
+}
+
+.chicks-logo-img {
+    width: 10rem;
+    max-height: 2rem;
+}
+
+@media only screen and (min-width: 1024px) {
+    .chicks-logo-img {
+        max-height: 4rem;
+    }
+}
